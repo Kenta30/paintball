@@ -1,0 +1,238 @@
+<mxfile host="65bd71144e">
+    <diagram id="KyIO6rD1DJYrtJ9rCwEI" name="Page-1">
+        <mxGraphModel dx="1118" dy="782" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1600" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3" value="Command Based?" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" style="edgeStyle=none;html=1;" edge="1" parent="1" source="5" target="8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="/paintball" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry y="80" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" style="edgeStyle=none;html=1;" edge="1" parent="1" source="8">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="320" y="110" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="player with job args:&lt;br&gt;&amp;nbsp;[new/end]" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="80" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="shape=flexArrow;endArrow=classic;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="209.5" y="140" as="sourcePoint"/>
+                        <mxPoint x="209.5" y="230" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="new: Generates a new game. Player specifies which gamemode." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="230" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="" style="shape=flexArrow;endArrow=classic;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="209.5" y="290" as="sourcePoint"/>
+                        <mxPoint x="209.5" y="380" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" value="end: Ends the generated game, clearing the paintball data table." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="380" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="normal player args:&amp;nbsp;&lt;br&gt;[join/leave]" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="80" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="shape=flexArrow;endArrow=classic;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="379.5" y="140" as="sourcePoint"/>
+                        <mxPoint x="379.5" y="230" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="20" value="" style="shape=flexArrow;endArrow=classic;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="379.5" y="290" as="sourcePoint"/>
+                        <mxPoint x="379.5" y="380" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" value="join: joins the specified game depending on ID or if near specific coords?" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="230" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="leave: Leaves the specified game depending on ID or if near specific coords?" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="380" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="Tracking + Command based." style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry y="480" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" style="edgeStyle=none;html=1;" edge="1" parent="1" source="24">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="150" y="590" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="24" value="/paintball" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry y="560" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" style="edgeStyle=none;html=1;" edge="1" parent="1" source="25">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="320" y="590" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="25" value="player with job args:&lt;br&gt;&amp;nbsp;[new/end]" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="560" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="" style="shape=flexArrow;endArrow=classic;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="209.5" y="620" as="sourcePoint"/>
+                        <mxPoint x="209.5" y="710" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="31" value="new: Generates a new game. Player specifies which gamemode." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="710" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="" style="shape=flexArrow;endArrow=classic;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="209.5" y="770" as="sourcePoint"/>
+                        <mxPoint x="209.5" y="860" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="33" value="end: Ends the generated game, clearing the paintball data table." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="860" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="normal player tracking:&lt;br&gt;options = {join / leave}" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="560" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="" style="shape=flexArrow;endArrow=classic;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="379.5" y="620" as="sourcePoint"/>
+                        <mxPoint x="379.5" y="710" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="41" value="Third eye: join: stores player into game table and specified team into team table." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="710" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="" style="shape=flexArrow;endArrow=classic;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="379.5" y="770" as="sourcePoint"/>
+                        <mxPoint x="379.5" y="860" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="43" value="Third eye: leave: (table.remove&amp;nbsp;&lt;br&gt;maybe?) Remove player source from game table &amp;amp; teamtable." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="310" y="860" width="140" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="Tracking + nh-keyboard input." style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="490" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" style="edgeStyle=none;html=1;" edge="1" parent="1" source="45">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="670" y="120" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="45" value="Player with job walks up to specified location, uses third eye for nh-keyboard input" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="470" y="80" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="" style="shape=link;html=1;" edge="1" parent="1">
+                    <mxGeometry width="100" relative="1" as="geometry">
+                        <mxPoint x="460" as="sourcePoint"/>
+                        <mxPoint x="460" y="1600" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="49" value="" style="shape=link;html=1;" edge="1" parent="1">
+                    <mxGeometry width="100" relative="1" as="geometry">
+                        <mxPoint y="470" as="sourcePoint"/>
+                        <mxPoint x="460" y="470" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="70" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="51" target="61">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="New/End in argument box." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="670" y="85" width="140" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="" style="shape=flexArrow;endArrow=classic;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="739.5" y="155" as="sourcePoint"/>
+                        <mxPoint x="739.5" y="245" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="61" value="Join/Leave in argument box." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1030" y="85" width="140" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" style="edgeStyle=none;html=1;" edge="1" parent="1" source="65">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="850" y="285" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="65" value="Third eye &amp;amp; nh-keyboard input: New: generates a new game." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="670" y="250" width="140" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="" style="shape=flexArrow;endArrow=classic;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="739.5" y="320" as="sourcePoint"/>
+                        <mxPoint x="739.5" y="410" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="67" value="Third eye &amp;amp; nh-keyboard input: Gamemode: player with job specifies gamemode." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="850" y="250" width="140" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="Third eye &amp;amp; nh-keyboard input: End: ends the generated game, clearing the paintball data table." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="670" y="410" width="140" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="Third eye &amp;amp; nh-keyboard input: join: stores player into game table and specified team into team table." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1030" y="250" width="140" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="" style="shape=flexArrow;endArrow=classic;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1099.5" y="155" as="sourcePoint"/>
+                        <mxPoint x="1099.5" y="245" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="76" value="" style="shape=flexArrow;endArrow=classic;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1099.5" y="320" as="sourcePoint"/>
+                        <mxPoint x="1099.5" y="410" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="77" value="Third eye &amp;amp; nh-keyboard input: leave: (table.remove&amp;nbsp;&lt;br&gt;maybe?) Remove player source from game table &amp;amp; teamtable." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1020" y="410" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" value="" style="shape=link;html=1;" edge="1" parent="1">
+                    <mxGeometry width="100" relative="1" as="geometry">
+                        <mxPoint x="460" y="500" as="sourcePoint"/>
+                        <mxPoint x="1200" y="500" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="79" value="Code Base" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="760" y="500" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="87" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="84" target="85">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="92" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="84" target="91">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" value="Commands" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="540" y="590" width="120" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="89" style="edgeStyle=none;html=1;" edge="1" parent="1" source="85">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="610" y="720" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="94" style="edgeStyle=none;html=1;" edge="1" parent="1" source="85" target="91">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" value="Server: create, join, leave, end, gamemode." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="460" y="690" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="91" value="Update Clients." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="650" y="700" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="95" value="" style="shape=link;html=1;" edge="1" parent="1">
+                    <mxGeometry width="100" relative="1" as="geometry">
+                        <mxPoint y="1040" as="sourcePoint"/>
+                        <mxPoint x="460" y="1040" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
