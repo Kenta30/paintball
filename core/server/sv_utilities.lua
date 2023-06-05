@@ -5,7 +5,7 @@ Utils = {
     MySQLAsyncExecute  = function(query) -- MySQL Query Function
         local IsBusy = true
         local result = nil
-        MySQL.Async.fetchAll(query, {}, function(data)
+        MySQL.query(query, {}, function(data)
             result = data
             IsBusy = false
         end)
