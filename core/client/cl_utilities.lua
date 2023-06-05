@@ -18,7 +18,7 @@ end,
         return PlayerPedId() 
 end,
     plyHealth   = function() -- Player Health function
-        local plyHealth = (GetEntityHealth(GetPlayerPed(-1)) - 100)
+        local plyHealth = (GetEntityHealth(PlayerPedId()) - 100)
         return plyHealth
 end,
     drawNoti = function(txt) -- draw notification function
@@ -36,13 +36,13 @@ end,
         local ped = Utils.LocalPed()
         local x,y,z = table.unpack(GetEntityCoords(ped, true))
         Utils.loadModel(objname)
-        local obj = CreateObject(GetHashKey(objname), x, y, z-1.90, true, true, true)
+        local obj = CreateObject(joaat(objname), x, y, z-1.90, true, true, true)
         PlaceObjectOnGroundProperly(obj)
         SetEntityHeading(obj, heading)
         FreezeEntityPosition(obj, true)
 end,
     DeleteObject = function(object2) -- Delete Object function
-        local object = GetHashKey(object2)
+        local object = joaat(object2)
         local x,y,z = table.unpack(GetEntityCoords(PlayerPedId(), true))
         if DoesObjectOfTypeExistAtCoords(x, y, z, 0.9, object, true) then
             local obj = GetClosestObjectOfType(x, y, z, 0.9, object, false, false, false)
@@ -208,7 +208,7 @@ end,
     end,
     InsertModel = function(model)
         local ogmodel = model
-        if type(model) == "string" then model = GetHashKey(model) elseif type(model) ~= "number" then return {inserted = false, model = model} end
+        if type(model) == "string" then model = joaat(model) elseif type(model) ~= "number" then return {inserted = false, model = model} end
         local timer = GetGameTimer() + 10000 -- 10 seconds to load
     
         if not HasModelLoaded(model) and IsModelInCdimage(model) then
