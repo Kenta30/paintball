@@ -1,9 +1,4 @@
 ---------------------------
-    -- ESX Component --
----------------------------
-ESX = nil
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
----------------------------
     -- Variables --
 ---------------------------
 local paintBallData = {}
