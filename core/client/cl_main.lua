@@ -1,30 +1,3 @@
----------------------------
-    -- ESX Component --
----------------------------
-ESX = nil
-Citizen.CreateThread(function()
-    while ESX == nil do
-        TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-        Citizen.Wait(0)
-    end
-
-    while ESX.GetPlayerData().job == nil do
-        Citizen.Wait(100)
-    end
-
-    ESX.PlayerData = ESX.GetPlayerData()
-end)
-
-RegisterNetEvent('esx:playerLoaded')
-AddEventHandler('esx:playerLoaded', function(xPlayer)
-    ESX.PlayerData = xPlayer
-end)
-
-RegisterNetEvent('esx:setJob')
-AddEventHandler('esx:setJob', function(job)
-    ESX.PlayerData.job = job
-end)
----------------------------
     -- Variables --
 ---------------------------
 local paintBallData = {}
@@ -123,7 +96,7 @@ AddEventHandler('paintball:startGame', function(paintBallGameID, paintBallServer
         PaintballData.Paintball.currentGameModePoints = "score"
         paintBallGameTeleportToStart(paintBallGameID, PaintballData.Paintball.team, paintBallData)
         paintBallGameTimer()
-        GiveWeaponToPed(PlayerPedId(), GetHashKey("WEAPON_MICROSMG"), 9999, false, true)
+        GiveWeaponToPed(PlayerPedId(), `WEAPON_MICROSMG`, 9999, false, true)
         
         CreateThread(function()
             while PaintballData.Paintball.startGame do
@@ -212,7 +185,7 @@ AddEventHandler('paintball:endGame', function()
         LocalPlayer.state:set("inPaintballGame", false, true)
         LocalPlayer.state:set("onPaintballDeath", false, true)
         LocalPlayer.state:set("paintBallTeam", nil, true)
-        RemoveWeaponFromPed(PlayerPedId(), GetHashKey("WEAPON_MICROSMG"))
+        RemoveWeaponFromPed(PlayerPedId(), `WEAPON_MICROSMG`)
         exports['mythic_notify']:SendAlert('inform', 'Game has ended.')
         paintBallDeleteObject()
     end
@@ -238,9 +211,9 @@ AddEventHandler('paintball:sessionGame', function(playerId, team, type)
                 LocalPlayer.state:set("inPaintballGame", false, true)
                 LocalPlayer.state:set("paintBallTeam", nil, true)
                 LocalPlayer.state:set("onPaintballDeath", false, true)
-                RemoveWeaponFromPed(PlayerPedId(), GetHashKey("WEAPON_MICROSMG"))
+                RemoveWeaponFromPed(PlayerPedId(), `WEAPON_MICROSMG`)
                 PaintballData.Paintball.team = LocalPlayer.state.paintBallTeam
-                SetPedRelationshipGroupHash(PlayerPedId(), GetHashKey("PLAYER"))
+                SetPedRelationshipGroupHash(PlayerPedId(), `PLAYER`)
                 SetEntityCanBeDamagedByRelationshipGroup(PlayerPedId(), true, GetPedRelationshipGroupHash(PlayerPedId()))
                 TriggerServerEvent('paintball:sendGameData')
                 paintBallDeleteObject()
@@ -257,9 +230,9 @@ AddEventHandler('paintball:sessionGame', function(playerId, team, type)
                 LocalPlayer.state:set("inPaintballGame", false, true)
                 LocalPlayer.state:set("paintBallTeam", nil, true)
                 LocalPlayer.state:set("onPaintballDeath", false, true)
-                RemoveWeaponFromPed(PlayerPedId(), GetHashKey("WEAPON_MICROSMG"))
+                RemoveWeaponFromPed(PlayerPedId(), `WEAPON_MICROSMG`)
                 PaintballData.Paintball.team = LocalPlayer.state.paintBallTeam
-                SetPedRelationshipGroupHash(PlayerPedId(), GetHashKey("PLAYER"))
+                SetPedRelationshipGroupHash(PlayerPedId(), `PLAYER`)
                 SetEntityCanBeDamagedByRelationshipGroup(PlayerPedId(), true, GetPedRelationshipGroupHash(PlayerPedId()))
                 TriggerServerEvent('paintball:sendGameData')
                 paintBallDeleteObject()
@@ -284,7 +257,7 @@ AddEventHandler('paintball:onPaintballDeath', function(playerId, gameID, paintBa
                 SetEntityHealth(ped, 200)
                 ClearPedBloodDamage(ped)
                 ClearPedTasks(ped)
-                GiveWeaponToPed(ped, GetHashKey("WEAPON_MICROSMG"), 9999, false, true)
+                GiveWeaponToPed(ped, `WEAPON_MICROSMG`, 9999, false, true)
             end
         else
             SetEntityCoordsNoOffset(ped, GetEntityCoords(ped), false, false, false, true)
@@ -292,7 +265,7 @@ AddEventHandler('paintball:onPaintballDeath', function(playerId, gameID, paintBa
             SetEntityHealth(ped, 200)
             ClearPedBloodDamage(ped)
             ClearPedTasks(ped)
-            GiveWeaponToPed(ped, GetHashKey("WEAPON_MICROSMG"), 9999, false, true)
+            GiveWeaponToPed(ped, `WEAPON_MICROSMG`, 9999, false, true)
         end
 	end
 end)
@@ -728,7 +701,7 @@ addPaintBallDeath = function(victimId, gameID, team)
 end
 
 usingPaintBallGun = function(entity)
-    return (GetSelectedPedWeapon(entity) == GetHashKey("WEAPON_MICROSMG"))
+    return (GetSelectedPedWeapon(entity) == `WEAPON_MICROSMG`)
 end
 
 requestFlag = function(flag)
@@ -787,9 +760,9 @@ if Config.Debug then
         LocalPlayer.state:set("paintBallTeam", nil, true)
         LocalPlayer.state:set("hasCTFFlag", false, true)
         LocalPlayer.state:set("onPaintballDeath", false, true)
-        SetPedRelationshipGroupHash(ped, GetHashKey("PLAYER"))
-        RemoveWeaponFromPed(ped, GetHashKey("WEAPON_MICROSMG"))
-        SetEntityCanBeDamagedByRelationshipGroup(ped, true, GetHashKey("PLAYER"))
+        SetPedRelationshipGroupHash(ped, `PLAYER`)
+        RemoveWeaponFromPed(ped, `WEAPON_MICROSMG`)
+        SetEntityCanBeDamagedByRelationshipGroup(ped, true, `PLAYER`)
         print("in paintball game state reset: ", LocalPlayer.state.inPaintballGame)
         ClearScenarioObject()
     end
@@ -797,7 +770,7 @@ if Config.Debug then
     ClearScenarioObject = function()
         local playerPed = PlayerPedId()
         local playerCoords = GetEntityCoords(playerPed)
-        local flagEntity = GetClosestObjectOfType(playerCoords.x, playerCoords.y, playerCoords.z, 1000.0, GetHashKey("ind_prop_dlc_flag_02"), false)
+        local flagEntity = GetClosestObjectOfType(playerCoords.x, playerCoords.y, playerCoords.z, 1000.0, `ind_prop_dlc_flag_02`, false)
         if DoesEntityExist(flagEntity) then
             DeleteEntity(flagEntity)
             DeleteObject(flagEntity)
