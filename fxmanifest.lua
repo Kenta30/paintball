@@ -1,4 +1,4 @@
-fx_version 'adamant'
+fx_version 'cerulean'
 game 'gta5'
 author 'Vinny'
 lua54 'yes'
@@ -11,6 +11,11 @@ client_scripts {
 server_scripts {
     '_configs/*.lua',
     'core/server/*.lua'
+}
+
+shared_scripts {
+    --'@ox_lib/init.lua',
+    '@es_extended/imports.lua'
 }
 
 --ui_page 'ui/index.html'
